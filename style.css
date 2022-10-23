@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body > figure * {
+    z-index: 11;
+    background-color: transparent;
+}
+
+figure#inner {
+    z-index: 11;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#cover {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent 49.5% /*54.9%*/, #444 /*54.9%*/ 50%, white 50% 100%);
+    /* background: linear-gradient(110deg, transparent 0% 49.9%, black 49.9% 50%, white 50% 100%); */
+    transition: 1s;
+}
+
+#leftside *, #rightside * {
+    font-weight: 200;
+}
+
+#leftside {
+    color: #666;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;/* 
+    border: 3px solid blue; */
+}
+
+#rightside {
+    color: #222;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;/* 
+    border: 3px solid red; */
+}
+
+#bg {
+    position: absolute;
+    height: 100%;
+}
+
+.inner {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    background-color: rgba(222, 222, 222, 0.15);
+    box-shadow: 0 0 20px rgba(222, 222, 222, 0.3);
+}
+
+.m-a-i-n {
+    font-size: 56px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul#sns li {
+    float: left;
+    margin: 10px;
+}
+
+a img {
+    width: 20px;
+    height: 20px;
+}
+
+hr {
+    margin-top: 10px
+}
+
+#cover:hover + #cover {
+    background: linear-gradient(110deg, transparent 0% /*54.9%*/, black /*54.9%*/ 55%, white 55% 100%);
+}
